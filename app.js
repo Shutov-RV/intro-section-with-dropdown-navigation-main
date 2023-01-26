@@ -1,9 +1,12 @@
 let features = document.querySelector('.features');
+let features__mobile = document.querySelector('.features__mobile');
+let burger = document.querySelector('.burger');
 let company = document.querySelector('.company');
 
 let arrow = document.querySelector('.arrow');
 let features__nav = document.querySelector('.features__nav');
 let company__nav = document.querySelector('.company__nav');
+let menu__mobile = document.querySelector('.menu__mobile');
 
 
 features.addEventListener('click', () => {
@@ -13,6 +16,12 @@ features.addEventListener('click', () => {
 
 company.addEventListener('click', () => {
     renderCompany();
+}
+);
+
+
+burger.addEventListener('click', () => {
+    renderMobileMenu();
 }
 );
 
@@ -60,6 +69,13 @@ function renderCompany() {
         company.children[0].src="/images/icon-arrow-up.svg";
     }
 }
+
+
+function renderMobileMenu() {
+    menu__mobile.style.display = 'flex';
+}
+
+
 
 
 // if (window.addEventListener('click'), () => {
